@@ -1,0 +1,151 @@
+
+Scenario: Verify search and print all HTML tag names                     [90m# src/test/resources/Features/MagicBrick.feature:9[0m
+  [32mGiven [0m[32mUser navigates to [0m[32m[1m"https://www.magicbricks.com"[0m                  [90m# com.stepDefinitions.MagicBricksSteps.user_navigates_to(java.lang.String)[0m
+  [32mAnd [0m[32mUser verifies that the MagicBricks homepage is loaded successfully[0m [90m# com.stepDefinitions.MagicBricksSteps.user_verifies_that_the_magic_bricks_homepage_is_loaded_successfully()[0m
+  [32mGiven [0m[32mI am on the Home Page[0m                                            [90m# com.stepDefinitions.MagicBricksSteps.i_am_on_the_home_page()[0m
+  [32mAnd [0m[32mUser verifies that the MagicBricks homepage is loaded[0m              [90m# com.stepDefinitions.MagicBricksSteps.user_verifies_that_the_magic_bricks_homepage_is_loaded_successfully1()[0m
+  [32mWhen [0m[32mUser clicks on the Search button[0m                                  [90m# com.stepDefinitions.MagicBricksSteps.user_clicks_on_the_search_button()[0m
+  [32mThen [0m[32mSearch results page should be displayed[0m                           [90m# com.stepDefinitions.MagicBricksSteps.search_results_page_should_be_displayed()[0m
+  [32mAnd [0m[32mUser prints all unique HTML tag names on the search results page[0m   [90m# com.stepDefinitions.MagicBricksSteps.user_prints_all_unique_html_tag_names_on_the_search_results_page()[0m
+
+Scenario: EMI Calculator using Excel data                                [90m# src/test/resources/Features/MagicBrick.feature:17[0m
+  [32mGiven [0m[32mUser navigates to [0m[32m[1m"https://www.magicbricks.com"[0m                  [90m# com.stepDefinitions.MagicBricksSteps.user_navigates_to(java.lang.String)[0m
+  [32mAnd [0m[32mUser verifies that the MagicBricks homepage is loaded successfully[0m [90m# com.stepDefinitions.MagicBricksSteps.user_verifies_that_the_magic_bricks_homepage_is_loaded_successfully()[0m
+  [32mGiven [0m[32mI am on the Home Page[0m                                            [90m# com.stepDefinitions.MagicBricksSteps.i_am_on_the_home_page()[0m
+  [31mWhen [0m[31mI perform EMI calculation using Excel data[0m                        [90m# com.stepDefinitions.MagicBricksSteps.user_calculates_emi_for_all_data_from_excel()[0m
+      [31morg.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a href="javascript:void(0);" class="hl__calc--btn" id="submitbuttonEmiCalid" onclick="CALCULATORS.calculateEMIAction()">...</a> is not clickable at point (258, 541). Other element would receive the click: <div class="hl__banner__title">...</div>
+  (Session info: chrome=141.0.7390.77)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [23c4ed04c7f890c8175d9dfddb77086a, clickElement {id=f.05B7E3B590E6798508234885E3D165D9.d.D5106E3D2E4FB7429A84D909D8FD8930.e.146}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.77, chrome: {chromedriverVersion: 141.0.7390.78 (2b53b0e231fc..., userDataDir: C:\Users\rrahulre\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59665}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59665/devtoo..., se:cdpVersion: 141.0.7390.77, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (23c4ed04c7f890c8175d9dfddb77086a)] -> xpath: //a[text()='Recalculate Your EMI']]
+Session ID: 23c4ed04c7f890c8175d9dfddb77086a
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy24.click(Unknown Source)
+	at com.pages.EMICalculator.clickRecalculate(EMICalculator.java:73)
+	at com.stepDefinitions.MagicBricksSteps.user_calculates_emi_for_all_data_from_excel(MagicBricksSteps.java:123)
+	at ✽.I perform EMI calculation using Excel data(file:///C:/Users/rrahulre/eclipse-workspace/MagicBrick/src/test/resources/Features/MagicBrick.feature:19)
+[0m
+  [36mThen [0m[36mI should see calculated EMI and Interest details[0m                  [90m# com.stepDefinitions.MagicBricksSteps.Exp()[0m
+
+Scenario: View all properties and sort by price low to high              [90m# src/test/resources/Features/MagicBrick.feature:23[0m
+  [32mGiven [0m[32mUser navigates to [0m[32m[1m"https://www.magicbricks.com"[0m                  [90m# com.stepDefinitions.MagicBricksSteps.user_navigates_to(java.lang.String)[0m
+  [32mAnd [0m[32mUser verifies that the MagicBricks homepage is loaded successfully[0m [90m# com.stepDefinitions.MagicBricksSteps.user_verifies_that_the_magic_bricks_homepage_is_loaded_successfully()[0m
+  [32mGiven [0m[32mI am on the Home Page[0m                                            [90m# com.stepDefinitions.MagicBricksSteps.i_am_on_the_home_page()[0m
+  [32mWhen [0m[32mI click on the [0m[32m[1m"See All Properties"[0m[32m tab[0m                           [90m# com.stepDefinitions.MagicBricksSteps.i_click_on_the_tab(java.lang.String)[0m
+  [32mThen [0m[32mI should be redirected to the Property Listings page[0m              [90m# com.stepDefinitions.MagicBricksSteps.i_should_be_redirected_to_the_property_listings_page()[0m
+  [31mWhen [0m[31mI select [0m[31m[1m"Price: Low to High"[0m[31m from the sort by dropdown[0m           [90m# com.stepDefinitions.MagicBricksSteps.i_select_from_the_sort_by_dropdown(java.lang.String)[0m
+      [31morg.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.xpath: //div[@class='mb-srp__tabs__sortby--title']' (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.pages.PropertiesListingPage.clickSortLowToHigh(PropertiesListingPage.java:37)
+	at com.stepDefinitions.MagicBricksSteps.i_select_from_the_sort_by_dropdown(MagicBricksSteps.java:163)
+	at ✽.I select "Price: Low to High" from the sort by dropdown(file:///C:/Users/rrahulre/eclipse-workspace/MagicBrick/src/test/resources/Features/MagicBrick.feature:27)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='mb-srp__tabs__sortby--title']"}
+  (Session info: chrome=141.0.7390.77)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7db77b0388a431ee2637d0207efc9247, findElement {value=//div[@class='mb-srp__tabs__sortby--title'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.77, chrome: {chromedriverVersion: 141.0.7390.78 (2b53b0e231fc..., userDataDir: C:\Users\rrahulre\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62214}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62214/devtoo..., se:cdpVersion: 141.0.7390.77, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7db77b0388a431ee2637d0207efc9247
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy24.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at com.pages.PropertiesListingPage.clickSortLowToHigh(PropertiesListingPage.java:37)
+	at com.stepDefinitions.MagicBricksSteps.i_select_from_the_sort_by_dropdown(MagicBricksSteps.java:163)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runFeatures$6(CucumberExecutionContext.java:148)
+	at io.cucumber.core.runtime.CucumberExecutionContext.execute(CucumberExecutionContext.java:163)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:146)
+	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:226)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:93)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:520)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:748)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:443)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:211)
+[0m
+
+Scenario: Interior Budget Estimator negative test                        [90m# src/test/resources/Features/MagicBrick.feature:30[0m
+  [32mGiven [0m[32mUser navigates to [0m[32m[1m"https://www.magicbricks.com"[0m                  [90m# com.stepDefinitions.MagicBricksSteps.user_navigates_to(java.lang.String)[0m
+  [32mAnd [0m[32mUser verifies that the MagicBricks homepage is loaded successfully[0m [90m# com.stepDefinitions.MagicBricksSteps.user_verifies_that_the_magic_bricks_homepage_is_loaded_successfully()[0m
+  [32mGiven [0m[32mI am on the Home Page[0m                                            [90m# com.stepDefinitions.MagicBricksSteps.i_am_on_the_home_page()[0m
+  [32mWhen [0m[32mI click on "Interior Budget Estimator"[0m                            [90m# com.stepDefinitions.MagicBricksSteps.i_click_on_interior_budget_estimator()[0m
+  [32mAnd [0m[32mI submit the estimator form without filling any details[0m            [90m# com.stepDefinitions.MagicBricksSteps.i_submit_the_estimator_form_without_filling_any_details()[0m
+  [32mThen [0m[32mI should see appropriate validation error messages[0m                [90m# com.stepDefinitions.MagicBricksSteps.i_should_see_appropriate_validation_error_messages()[0m
+  [32mAnd [0m[32mTake a ScreenShot [0m[32m[1m"ErrorMessage"[0m                                   [90m# com.stepDefinitions.MagicBricksSteps.take_a_screen_shot(java.lang.String)[0m
